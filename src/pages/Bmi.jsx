@@ -23,19 +23,19 @@ function Bmi() {
 
     if (bmiValue < 18.5) {
       setStatus("وزن ناقص");
-      setImageSrc("underw.jpg");
+      setImageSrc("./imge/underw.jpg");
     } else if (bmiValue >= 18.5 && bmiValue < 25) {
       setStatus("وزن صحي");
-      setImageSrc("netrel.jpg");
+      setImageSrc("./imge/netrel.jpg");
     } else if (bmiValue >= 25 && bmiValue < 30) {
       setStatus("وزن زائد");
-      setImageSrc("upw.jpg");
+      setImageSrc("./imge/upw.jpg");
     } else if (bmiValue >= 30 && bmiValue < 35) {
       setStatus("سمنة");
-      setImageSrc("fat.jpg");
+      setImageSrc("./imge/fat.jpg");
     } else {
       setStatus("سمنة مفرطة");
-      setImageSrc("vfat.jpg");
+      setImageSrc("./imge/vfat.jpg");
     }
   };
 
