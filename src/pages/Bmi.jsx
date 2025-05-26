@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
+import underw from "../imge/underw.jpg";
+import netrel from "../imge/netrel.jpg";
+import upw from "../imge/upw.jpg";
+import fat from "../imge/fat.jpg";
+import vfat from "../imge/vfat.jpg";
 
 function Bmi() {
   const navigate = useNavigate();
@@ -23,24 +28,24 @@ function Bmi() {
 
     if (bmiValue < 18.5) {
       setStatus("وزن ناقص");
-      setImageSrc("./imge/underw.jpg");
+      setImageSrc(underw);
     } else if (bmiValue >= 18.5 && bmiValue < 25) {
       setStatus("وزن صحي");
-      setImageSrc("./imge/netrel.jpg");
+      setImageSrc(netrel);
     } else if (bmiValue >= 25 && bmiValue < 30) {
       setStatus("وزن زائد");
-      setImageSrc("./imge/upw.jpg");
+      setImageSrc(upw);
     } else if (bmiValue >= 30 && bmiValue < 35) {
       setStatus("سمنة");
-      setImageSrc("./imge/fat.jpg");
+      setImageSrc(fat);
     } else {
       setStatus("سمنة مفرطة");
-      setImageSrc("./imge/vfat.jpg");
+      setImageSrc(vfat);
     }
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-yellow-100">
+    <div className="min-h-screen flex flex-col items-center justify-center ">
       <h1 className="text-2xl font-bold mb-4">حاسبة مؤشر كتلة الجسم</h1>
       <div className="space-y-4">
         <input
@@ -66,7 +71,7 @@ function Bmi() {
         <div className="mt-6 text-center">
           <p>مؤشر كتلة الجسم: {bmi}</p>
           <p>الحالة: {status}</p>
-          {imageSrc && <img src={imageSrc} className="mt-4 w-32 h-32" />}
+          {imageSrc && <img src={imageSrc} className="mt-4 w-32" />}
         </div>
       )}
     </div>
